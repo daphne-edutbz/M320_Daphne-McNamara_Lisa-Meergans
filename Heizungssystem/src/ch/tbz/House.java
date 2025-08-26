@@ -5,7 +5,7 @@ import java.util.List;
 public class House {
 
     //attributes
-    private List<Room> rooms;
+    private List<Room> rooms; //complex datatype (references an object)
 
 
     //constructor

@@ -28,13 +28,13 @@ public class Main {
         house.showStatus();
 
         System.out.println("\nRegulate all temperatures: 22°C");
-        house.setAllTemperatures(22);
+        house.setAllTemperatures(22); //example of objects comunicationg with each other
         System.out.println("Temperature Status: ");
         house.showStatus();
 
         //change temperature
         System.out.println("\n change Temperature of Bedroom: 18°C");
-        bedRoom.getHeating().setTemperature(18);
+        bedRoom.getHeating().setTemperature(18); //example of the state of an object changing
         System.out.println("Temperature Status: ");
         house.showStatus();
     }

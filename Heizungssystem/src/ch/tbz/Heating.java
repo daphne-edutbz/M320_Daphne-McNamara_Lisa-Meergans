@@ -3,7 +3,7 @@ package ch.tbz;
 public class Heating {
 
     //attributes
-    private int temperature;
+    private int temperature; //Datenkapselung -> attributes are private, not accessible from outside
 
 
     //constructor
