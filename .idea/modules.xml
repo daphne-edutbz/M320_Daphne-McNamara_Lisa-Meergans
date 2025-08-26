@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BankSimulation/BankSimulation.iml" filepath="$PROJECT_DIR$/BankSimulation/BankSimulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Heizungssystem/Heizungssystem.iml" filepath="$PROJECT_DIR$/Heizungssystem/Heizungssystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/M320_Daphne-McNamara_Lisa-Meergans.iml" filepath="$PROJECT_DIR$/.idea/M320_Daphne-McNamara_Lisa-Meergans.iml" />
+    </modules>
+  </component>
+</project>
