@@ -73,6 +73,7 @@ public class Process {
             System.out.println("Flight not found.");
             return;
         }
+        sc.nextLine();
         System.out.print("Enter passenger name: ");
         String name = sc.nextLine();
         flight.addPassenger(new Passenger(name));
@@ -85,7 +86,7 @@ public class Process {
         Flight flight = schedule.findFlight(flightNum);
         if (flight != null) {
             for(int i = 0; i < flight.getPassengers().size(); i++) {
-                System.out.print("Name: " + flight.getPassengers().get(i).getName());
+                System.out.println("Name: " + flight.getPassengers().get(i).getName());
             }
         } else {
             System.out.println("Flight not found.");
@@ -97,11 +98,12 @@ public class Process {
         int flightNum = sc.nextInt();
         Flight flight = schedule.findFlight(flightNum);
         if (flight != null) {
+            sc.nextLine();
             System.out.print("Enter passenger name: ");
             String name = sc.nextLine();
             Passenger p = flight.findPassenger(name);
             if (p != null) {
-                System.out.println("Passenger found: " + p);
+                System.out.println("Passenger found: " + p.getName());
             } else {
                 System.out.println("Passenger not found.");
             }
@@ -113,6 +115,7 @@ public class Process {
         int flightNum = sc.nextInt();
         Flight flight = schedule.findFlight(flightNum);
         if (flight != null) {
+            sc.nextLine();
             System.out.print("Enter passenger name: ");
             String name = sc.nextLine();
             Passenger passenger = flight.findPassenger(name);

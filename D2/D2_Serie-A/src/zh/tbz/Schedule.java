@@ -1,6 +1,5 @@
 package zh.tbz;
 
-import javax.xml.namespace.QName;
 import java.util.ArrayList;
 import java.util.List;
 
