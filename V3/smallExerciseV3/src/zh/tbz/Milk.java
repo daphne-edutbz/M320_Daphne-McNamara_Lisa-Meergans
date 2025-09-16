@@ -4,13 +4,14 @@ public class Milk implements iBuyable {
     private String name;
     private double price;
 
-    public Milk(double price) {
+    public Milk(String name, double price) {
+        this.name = name;
         this.price = price;
     }
 
     @Override
     public String name() {
-        return "Milk";
+        return name;
     }
 
     @Override

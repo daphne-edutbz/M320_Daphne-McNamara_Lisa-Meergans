@@ -12,7 +12,7 @@ public class Banana implements iBuyable {
 
     @Override
     public String name() {
-        return "Banana";
+        return name;
     }
 
     @Override

@@ -7,13 +7,12 @@ public class Main {
     public static void main(String[] args) {
         List<iBuyable> shoppingCart = new ArrayList<>();
 
-        shoppingCart.add(new Milk(1.50));
-        shoppingCart.add(new Banana(0.70));
-        shoppingCart.add(new Banana(0.65));
+        shoppingCart.add(new Milk("Milk", 2.99));
+        shoppingCart.add(new Banana("Banana", 1.99));
 
-        // Quittung ausgeben
+        // receipt
         double total = 0;
-        System.out.println("Quittung:");
+        System.out.println("Receipt:");
         for (iBuyable item : shoppingCart) {
             System.out.println(item.name() + " - " + item.price() + " CHF");
             total += item.price();
