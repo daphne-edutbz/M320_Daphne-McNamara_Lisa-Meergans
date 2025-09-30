@@ -1,0 +1,4 @@
+Thor;2011;Action, Fantasy;Kenneth Branagh;7.0
+Titanic;1997;Drama, Romance;James Cameron;7.9
+Spiderman;1990;Short;Christian Davi;5.6
+Batman;1989;Action, Adventure;Tim Burton;7.5
