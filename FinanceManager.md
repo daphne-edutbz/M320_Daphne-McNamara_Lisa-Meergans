@@ -1,9 +1,9 @@
 ## Use Cases
-Einnahme hinzufügen: Benutzer gibt Betrag, Datum, Beschreibung ein; System speichert als Income.
+Einnahme hinzufügen: Benutzer gibt Betrag, Datum, Beschreibung ein: System speichert als Income.
 
-Ausgabe hinzufügen: Benutzer gibt Betrag, Datum, Beschreibung ein; System speichert als Expense.
+Ausgabe hinzufügen: Benutzer gibt Betrag, Datum, Beschreibung ein: System speichert als Expense.
 
-Budget überprüfen: System überprüft, ob Budget überschritten ist.UC4: Bericht / Statistik erstellenBenutzer wählt Report-Typ (Summe, Durchschnitt, Trend); System erzeugt Report.
+Budget überprüfen: System überprüft, ob Budget überschritten ist
 
 ## Ziel:  Die Applikation soll Benutzern ermöglichen, ihre Finanzen zu verwalten. Dazu gehören Einnahmen, Ausgaben, Budgets und Berichte.
 
