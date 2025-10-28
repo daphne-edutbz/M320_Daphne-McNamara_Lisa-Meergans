@@ -1,4 +1,8 @@
 package ch.tbz.financemanager.report;
 
-public class ReportStrategy {
+import ch.tbz.financemanager.model.Transaction;
+import java.util.List;
+
+public interface ReportStrategy {
+    String generate(List<Transaction> transactions);
 }
