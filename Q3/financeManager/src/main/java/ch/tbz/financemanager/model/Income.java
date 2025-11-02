@@ -2,9 +2,12 @@ package ch.tbz.financemanager.model;
 
 import java.time.LocalDate;
 
+/**
+ * Represents an income transaction (money inflow).
+ */
 public class Income extends Transaction {
 
-    private boolean recurring;
+    private final boolean recurring;
 
     public Income(double amount, LocalDate date, String description, boolean recurring) {
         super(amount, date, description);
@@ -15,16 +18,18 @@ public class Income extends Transaction {
         return recurring;
     }
 
+    @Override
     public double getNetAmount() {
-        return amount;
-    }
-
-    public String categorize() {
-        return recurring ? "Recurring Income" : "One-time Income";
+        return amount; // income increases the balance
     }
 
     @Override
     public String getType() {
         return "Income";
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + (recurring ? " (recurring)" : "");
     }
 }
