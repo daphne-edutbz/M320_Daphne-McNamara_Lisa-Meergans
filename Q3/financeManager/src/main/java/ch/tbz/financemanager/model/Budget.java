@@ -11,11 +11,21 @@ public class Budget {
     }
 
     public boolean isExceeded(List<Transaction> transactions) {
-        double total = 0;
+        double totalExpenses = 0;
         for (Transaction t : transactions) {
-            total += t.getAmount();
+            if (t instanceof Expense) {   // only count expenses
+                totalExpenses += Math.abs(t.getAmount());
+            }
         }
-        return total > limit;
+        return totalExpenses > limit;
+    }
+
+    public boolean isExceededAfter(Transaction t, List<Transaction> transactions) {
+        double totalExpenses = Math.abs(t.getAmount());
+        for (Transaction tx : transactions) {
+            if (tx instanceof Expense) totalExpenses += Math.abs(tx.getAmount());
+        }
+        return totalExpenses > limit;
     }
 
     public double getLimit() {
