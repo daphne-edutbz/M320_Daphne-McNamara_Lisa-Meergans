@@ -14,19 +14,11 @@ public class User {
         cart.addItem(product);
     }
 
-    public void checkout(OrderRepository repo, PaymentService paymentService, DiscountStrategy discount) {
+    public void checkout(CheckoutService service, DiscountStrategy discount, PaymentService paymentService, OrderRepository repo) {
         if (cart.getItems().isEmpty()) {
             throw new EmptyCartException("Cart is empty, cannot checkout an empty cart.");
         }
-        Order order = new Order(id, cart.getItems(), cart.getTotal());
-        order.applyDiscount(discount);
-        paymentService.pay(order, "Credit Card");
-        repo.saveOrder(order);
-        System.out.println("Order #" + id + " has been placed: " + order);
-
-        PurchaseReceipt receipt = new PurchaseReceipt(order);
-        receipt.printReceipt();
-
+        service.processOrder(this, discount, paymentService, repo);
     }
 
     public Cart getCart() {
@@ -35,5 +27,13 @@ public class User {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
