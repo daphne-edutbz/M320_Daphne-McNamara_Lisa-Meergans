@@ -57,6 +57,10 @@ public class Account {
         this.budget = budget;
     }
 
+    public Budget getBudget() {
+        return budget;
+    }
+
     public String getAccountName() {
         return accountName;
     }

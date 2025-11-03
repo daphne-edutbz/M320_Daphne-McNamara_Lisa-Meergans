@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Singleton class to manage all accounts in the system.
+ * AccountManager is implemented as a Singleton.
+ * Reason: Ensures that there is only one instance managing all accounts.
+ * This prevents inconsistencies and makes it easy to access the accounts globally.
  */
 public class AccountManager {
     private static AccountManager instance;

@@ -9,7 +9,10 @@ import java.util.List;
 
 @Service
 public class ReportService {
-
+    /**
+     * Uses Strategy Pattern to generate reports.
+     * The specific strategy can be passed in dynamically.
+     */
     public String generateReport(List<Transaction> transactions, ReportStrategy strategy) {
         ReportGenerator generator = new ReportGenerator(strategy, transactions);
         return generator.generateReport();

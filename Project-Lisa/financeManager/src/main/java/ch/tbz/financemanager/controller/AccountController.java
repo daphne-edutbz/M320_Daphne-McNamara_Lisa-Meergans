@@ -8,6 +8,12 @@ import ch.tbz.financemanager.exception.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
+// ================================================
+// This project was partially assisted by ChatGPT.
+// The AI helped with structuring reports, transaction handling,
+// and generating example test code.
+// ================================================
+
 
 /**
  * Handles user interactions (console UI) for account and transaction management.
@@ -26,10 +32,10 @@ public class AccountController {
             System.out.println("2. Add Transaction");
             System.out.println("3. Show All Accounts");
             System.out.println("4. Generate Reports");
-            System.out.println("5. Exit");
-            System.out.println("6. Delete Account");
-            System.out.println("7. Update Account");
-            System.out.println("8. Show Transaction Statistics");
+            System.out.println("5. Delete Account");
+            System.out.println("6. Update Account");
+            System.out.println("7. Show Transaction Statistics");
+            System.out.println("8. Show Budget Status");
             System.out.println("9. Exit");
             System.out.print("Choose an option: ");
 
@@ -39,13 +45,14 @@ public class AccountController {
                 case "2" -> addTransactionToAccount();
                 case "3" -> showAccounts();
                 case "4" -> generateReports();
-                case "5" -> running = false;
-                case "6" -> deleteAccount();
-                case "7" -> updateAccount();
-                case "8" -> showTransactionStatistics();
+                case "5" -> deleteAccount();
+                case "6" -> updateAccount();
+                case "7" -> showTransactionStatistics();
+                case "8" -> showBudgetStatus();
                 case "9" -> running = false;
                 default -> System.out.println("Invalid input. Please try again.");
             }
+
         }
         System.out.println("Program terminated.");
     }
@@ -213,6 +220,8 @@ public class AccountController {
 
     // Utility input methods
     private double readDouble(String prompt) {
+        // Clean-Code: keeps prompting user until valid number is entered
+        // avoids duplicate code and ensures robustness
         while (true) {
             try {
                 System.out.print(prompt);
@@ -310,4 +319,28 @@ public class AccountController {
             default -> System.out.println("Invalid selection.");
         }
     }
+
+    private void showBudgetStatus() {
+        if (accountManager.getAccounts().isEmpty()) {
+            System.out.println("No accounts available.");
+            return;
+        }
+
+        showAccounts();
+        int index = (int) readDouble("Select account index: ") - 1;
+
+        if (index < 0 || index >= accountManager.getAccounts().size()) {
+            System.out.println("Invalid index.");
+            return;
+        }
+
+        Account account = accountManager.getAccounts().get(index);
+        if (account.getBudget() == null) {
+            System.out.println("This account has no budget set.");
+            return;
+        }
+
+        account.getBudget().printBudgetStatus(account.getTransactions());
+    }
+
 }

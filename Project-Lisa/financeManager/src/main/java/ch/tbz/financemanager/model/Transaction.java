@@ -3,8 +3,12 @@ package ch.tbz.financemanager.model;
 import java.time.LocalDate;
 
 /**
- * Abstract base class for all transactions (Income and Expense).
+ * Base class for all transactions (abstract).
+ * Reason for inheritance: Income and Expense share common attributes
+ * like amount, date, description. Polymorphism allows treating
+ * all transactions uniformly.
  */
+
 public abstract class Transaction {
 
     protected double amount;
