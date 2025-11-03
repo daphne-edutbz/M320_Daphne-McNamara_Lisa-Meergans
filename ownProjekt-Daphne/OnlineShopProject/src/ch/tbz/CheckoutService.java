@@ -16,10 +16,20 @@ public class CheckoutService {
      */
     public void processOrder(User user, DiscountStrategy discount, PaymentService paymentService, OrderRepository repo) {
         Order order = new Order(user.getId(), user.getCart().getItems(), user.getCart().getTotal());
+
+        double originalTotal = order.getTotalPrice();
+        double discountAmount = discount.calculateDiscount(originalTotal);
         order.applyDiscount(discount); // Strategy pattern
+
+        System.out.println("\n--- Checkout Summary ---");
+        System.out.println("Original total: " + originalTotal + " CHF");
+        System.out.println("Discount (" + discount.getClass().getSimpleName() + "): -" + discountAmount + " CHF");
+        System.out.println("Final total: " + order.getTotalPrice() + " CHF");
+        System.out.println("------------------------");
+
         paymentService.pay(order, "Credit Card");
         repo.saveOrder(order);
-        System.out.println("Order #" + user.getId() + " has been placed: " + order);
         new PurchaseReceipt(order).printReceipt();
     }
+
 }

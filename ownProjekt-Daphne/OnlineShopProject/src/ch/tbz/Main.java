@@ -1,5 +1,6 @@
 package ch.tbz;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -76,7 +77,8 @@ public class Main {
             System.out.println("2) Add product to cart");
             System.out.println("3) Show cart");
             System.out.println("4) Checkout");
-            System.out.println("5) Exit");
+            System.out.println("5) Remove product from cart");
+            System.out.println("6) Exit");
             System.out.print("Choose option: ");
             int choice = scanner.nextInt();
 
@@ -137,6 +139,32 @@ public class Main {
                     user.checkout(checkoutService, discount, paymentService, orderRepository);
                 }
                 case 5 -> {
+                    System.out.println("\nYour cart:");
+                    Cart cart = user.getCart();
+                    cart.showItems();
+
+                    System.out.print("Enter product ID to remove: ");
+                    int removeId = scanner.nextInt();
+
+                    System.out.print("How many of this product to remove? ");
+                    int qty = scanner.nextInt();
+
+                    int removedCount = 0;
+                    Iterator<Product> it = cart.getItems().iterator();
+                    while (it.hasNext() && removedCount < qty) {
+                        if (it.next().getId() == removeId) {
+                            it.remove();
+                            removedCount++;
+                        }
+                    }
+
+                    if (removedCount > 0) {
+                        System.out.println(removedCount + " item(s) removed from cart.");
+                    } else {
+                        System.out.println("Product not found in cart.");
+                    }
+                }
+                case 6 -> {
                     System.out.println("Exiting online shop.");
                     running = false;
                 }
