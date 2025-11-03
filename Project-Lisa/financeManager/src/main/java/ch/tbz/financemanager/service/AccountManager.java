@@ -25,4 +25,8 @@ public class AccountManager {
     public List<Account> getAccounts() {
         return accounts;
     }
+
+    public void removeAccount(Account account) {
+        accounts.remove(account);
+    }
 }

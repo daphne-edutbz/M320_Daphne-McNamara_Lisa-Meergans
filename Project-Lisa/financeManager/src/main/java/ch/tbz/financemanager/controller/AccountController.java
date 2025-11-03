@@ -26,8 +26,11 @@ public class AccountController {
             System.out.println("2. Add Transaction");
             System.out.println("3. Show All Accounts");
             System.out.println("4. Generate Reports");
-            System.out.println("5. Transaction Insights");
-            System.out.println("6. Exit");
+            System.out.println("5. Exit");
+            System.out.println("6. Delete Account");
+            System.out.println("7. Update Account");
+            System.out.println("8. Show Transaction Statistics");
+            System.out.println("9. Exit");
             System.out.print("Choose an option: ");
 
             String choice = scanner.nextLine();
@@ -36,8 +39,11 @@ public class AccountController {
                 case "2" -> addTransactionToAccount();
                 case "3" -> showAccounts();
                 case "4" -> generateReports();
-                case "5" -> showTransactionStatistics();
-                case "6" -> running = false;
+                case "5" -> running = false;
+                case "6" -> deleteAccount();
+                case "7" -> updateAccount();
+                case "8" -> showTransactionStatistics();
+                case "9" -> running = false;
                 default -> System.out.println("Invalid input. Please try again.");
             }
         }
@@ -49,7 +55,9 @@ public class AccountController {
         String name = scanner.nextLine();
 
         double startBalance = readDouble("Starting balance: ");
-        Account account = new Account(name, startBalance);
+        int pin = (int) readDouble("Set a 4-digit PIN: ");
+
+        Account account = new Account(name, startBalance, pin);
 
         double budgetLimit = readDouble("Monthly budget: ");
         account.setBudget(new Budget(budgetLimit));
@@ -57,6 +65,7 @@ public class AccountController {
         accountManager.addAccount(account);
         System.out.println("Account successfully created!");
     }
+
 
     private void addTransactionToAccount() {
         if (accountManager.getAccounts().isEmpty()) {
@@ -221,6 +230,84 @@ public class AccountController {
             if (input.equalsIgnoreCase("true")) return true;
             if (input.equalsIgnoreCase("false")) return false;
             System.out.println("Please enter 'true' or 'false'.");
+        }
+    }
+
+    private void deleteAccount() {
+        if (accountManager.getAccounts().isEmpty()) {
+            System.out.println("No accounts available to delete.");
+            return;
+        }
+
+        System.out.print("Enter admin code to delete an account: ");
+        String code = scanner.nextLine();
+
+        if (!code.equals("123")) {
+            System.out.println("Invalid code! Access denied.");
+            return;
+        }
+
+        showAccounts();
+        int index = (int) readDouble("Select account index to delete: ") - 1;
+
+        if (index < 0 || index >= accountManager.getAccounts().size()) {
+            System.out.println("Invalid index.");
+            return;
+        }
+
+        Account accountToRemove = accountManager.getAccounts().get(index);
+        accountManager.removeAccount(accountToRemove);
+
+        System.out.println("Account '" + accountToRemove.getAccountName() + "' has been deleted.");
+    }
+
+    private void updateAccount() {
+        if (accountManager.getAccounts().isEmpty()) {
+            System.out.println("No accounts exist yet.");
+            return;
+        }
+
+        showAccounts();
+        int index = (int) readDouble("Select account index: ") - 1;
+
+        if (index < 0 || index >= accountManager.getAccounts().size()) {
+            System.out.println("Invalid index.");
+            return;
+        }
+
+        Account account = accountManager.getAccounts().get(index);
+
+        int enteredPin = (int) readDouble("Enter your PIN: ");
+        if (enteredPin != account.getPin()) {
+            System.out.println("Incorrect PIN! Update aborted.");
+            return;
+        }
+
+        System.out.println("What would you like to update?");
+        System.out.println("1. Account name");
+        System.out.println("2. Budget limit");
+        System.out.println("3. PIN code");
+        System.out.print("Choose an option: ");
+        String choice = scanner.nextLine();
+
+        switch (choice) {
+            case "1" -> {
+                System.out.print("New account name: ");
+                String newName = scanner.nextLine();
+                account.setAccountName(newName);
+                System.out.println("Account name updated successfully!");
+            }
+            case "2" -> {
+                double newLimit = readDouble("New budget limit: ");
+                account.setBudget(new Budget(newLimit));
+                System.out.println("Budget updated successfully!");
+            }
+            case "3" -> {
+                int newPin = (int) readDouble("Enter new 4-digit PIN: ");
+                account.setPin(newPin);
+                System.out.println("PIN updated successfully!");
+            }
+            default -> System.out.println("Invalid selection.");
         }
     }
 }

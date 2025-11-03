@@ -10,10 +10,12 @@ public class Account {
     private double balance;
     private List<Transaction> transactions;
     private Budget budget;
+    private int pin;
 
-    public Account(String accountName, double balance) {
-        this.accountName = accountName;
+    public Account(String name, double balance, int pin) {
+        this.accountName = name;
         this.balance = balance;
+        this.pin = pin;
         this.transactions = new ArrayList<>();
     }
 
@@ -57,5 +59,17 @@ public class Account {
 
     public String getAccountName() {
         return accountName;
+    }
+
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    public void setPin(int pin) {
+        this.pin = pin;
     }
 }
