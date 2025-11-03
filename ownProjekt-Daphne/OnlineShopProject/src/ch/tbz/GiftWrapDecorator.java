@@ -1,6 +1,11 @@
 package ch.tbz;
 
-public class GiftWrapDecorator extends ProductDecorator{
+/**
+ * Decorator that adds gift wrapping to a product
+ * Demonstrates Decorator pattern
+ */
+public class GiftWrapDecorator extends ProductDecorator {
+    private static final double WRAP_COST = 5.0;
 
     public GiftWrapDecorator(Product product) {
         super(product);
@@ -13,6 +18,6 @@ public class GiftWrapDecorator extends ProductDecorator{
 
     @Override
     public double getPrice() {
-        return product.getPrice() + 5.0; //wrapping cost
+        return product.getPrice() + WRAP_COST;
     }
 }

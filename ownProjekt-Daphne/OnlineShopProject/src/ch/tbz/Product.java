@@ -1,5 +1,10 @@
 package ch.tbz;
 
+/**
+ * Base Product class.
+ * Polymorphism: can be subclassed into ElectronicProduct, FoodProduct.
+ * Decorator pattern: can be wrapped with ProductDecorator.
+ */
 public class Product {
     private int id;
     private String name;
@@ -35,14 +40,13 @@ public class Product {
         this.price = price;
     }
 
+    /** Returns product description */
     public String getDescription() {
         return name + " - " + price + " CHF";
     }
 
-
-    @Override public String toString() {
+    @Override
+    public String toString() {
         return getDescription();
     }
-
 }
-

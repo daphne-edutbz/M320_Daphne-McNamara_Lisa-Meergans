@@ -1,8 +1,11 @@
 package ch.tbz;
 
-//Design Pattern (Decorator, gift wrapping)
+/**
+ * Abstract decorator for Product (Decorator pattern)
+ * Allows addition of features, for example gift wrapping
+ */
 public abstract class ProductDecorator extends Product {
-    protected Product product; //Product that is being decorated
+    protected Product product; // Product being decorated
 
     public ProductDecorator(Product product) {
         super(product.getId(), product.getName(), product.getPrice());

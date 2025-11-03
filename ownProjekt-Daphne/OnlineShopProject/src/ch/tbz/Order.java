@@ -2,6 +2,10 @@ package ch.tbz;
 
 import java.util.List;
 
+/**
+ * Represents a completed order in the shop
+ * Stores list of products, total price and allows discount application
+ */
 public class Order {
     private int id;
     private List<Product> items;
@@ -41,6 +45,7 @@ public class Order {
         this.totalPrice = totalPrice;
     }
 
+    /** Apply discount strategy */
     public void applyDiscount(DiscountStrategy strategy) {
         double discount = strategy.calculateDiscount(totalPrice);
         totalPrice -= discount;
@@ -50,5 +55,4 @@ public class Order {
     public String toString() {
         return "Order #" + id + " total: " + totalPrice + " CHF";
     }
-
 }

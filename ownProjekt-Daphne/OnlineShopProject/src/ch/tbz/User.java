@@ -1,5 +1,9 @@
 package ch.tbz;
 
+/**
+ * User represents a customer in the shop.
+ * Delegates checkout logic to CheckoutService (delegation pattern).
+ */
 public class User {
     private int id;
     private String name;
@@ -10,11 +14,17 @@ public class User {
         this.name = name;
     }
 
+    /** Add a product to the user's cart */
     public void addToCart(Product product) {
         cart.addItem(product);
     }
 
-    public void checkout(CheckoutService service, DiscountStrategy discount, PaymentService paymentService, OrderRepository repo) {
+    /**
+     * Delegates checkout to CheckoutService.
+     * Demonstrates delegation pattern.
+     */
+    public void checkout(CheckoutService service, DiscountStrategy discount,
+                         PaymentService paymentService, OrderRepository repo) {
         if (cart.getItems().isEmpty()) {
             throw new EmptyCartException("Cart is empty, cannot checkout an empty cart.");
         }
