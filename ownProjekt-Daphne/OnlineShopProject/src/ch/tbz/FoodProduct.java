@@ -5,7 +5,7 @@ package ch.tbz;
  * Demonstrates polymorphism.
  */
 public class FoodProduct extends Product {
-    public FoodProduct(int id, String name, int price) {
+    public FoodProduct(int id, String name, double price) {
         super(id, name, price);
     }
 }
