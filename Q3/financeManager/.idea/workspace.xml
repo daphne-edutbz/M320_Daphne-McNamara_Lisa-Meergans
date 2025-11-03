@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47ca9ae9-36c8-4929-92f7-dcc9ae38c264" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/test/java/ch/tbz/financemanager/tests/AccountTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/model/Budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/model/Budget.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/report/ReportStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/report/ReportStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/service/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/service/AccountManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/service/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project-Lisa/financeManager/src/main/java/ch/tbz/financemanager/service/AccountService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
