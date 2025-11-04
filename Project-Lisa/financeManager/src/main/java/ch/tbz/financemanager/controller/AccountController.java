@@ -10,8 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 // ================================================
 // This project was partially assisted by ChatGPT.
-// The AI helped with structuring reports, transaction handling,
-// and generating example test code.
+// The AI helped with structuring reports and transaction handling,
 // ================================================
 
 /**
