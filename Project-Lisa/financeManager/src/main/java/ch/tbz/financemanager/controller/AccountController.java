@@ -14,7 +14,6 @@ import java.util.Scanner;
 // and generating example test code.
 // ================================================
 
-
 /**
  * Handles user interactions (console UI) for account and transaction management.
  */
