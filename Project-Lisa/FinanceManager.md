@@ -33,6 +33,14 @@ Summe, Durchschnitt oder Trend der Transaktionen
 
 Flexible Berechnung über das Strategy Pattern
 
+### Account erstellen, löschen und updaten
+Benutzer gibt Name, Pin und Budget ein
+
+System speichert die Informatioenn als Account
+
+### Budget prüfen
+Das System prüft, ob das Budget überschritten ist. Falls es überschritten wird, wird eine Fehlermeldung angezeigt. 
+
 ## Ziel:  Die Applikation soll Benutzern ermöglichen, ihre Finanzen zu verwalten. Dazu gehören Einnahmen, Ausgaben, Budgets und Berichte.
 
 1. Verwaltung von Konten und Transaktionen:
