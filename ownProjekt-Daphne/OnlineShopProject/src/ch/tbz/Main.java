@@ -9,6 +9,7 @@ import ch.tbz.repository.OrderRepository;
 import ch.tbz.repository.Repository;
 import ch.tbz.service.CheckoutService;
 import ch.tbz.service.PaymentService;
+import ch.tbz.util.OrderFileWriter;
 
 import java.util.Iterator;
 import java.util.Scanner;
@@ -60,9 +61,13 @@ public class Main {
 
         System.out.println("\nSaved Orders (OrderRepository):");
         orderRepository.getAllOrders().forEach(System.out::println);
+        OrderFileWriter.saveOrdersToFile(orderRepository.getAllOrders());
+
 
         System.out.println("\nSaved Orders (Generic Repository<T>):");
         genericOrderRepo.getAll().forEach(System.out::println);
+        OrderFileWriter.saveOrdersToFile(genericOrderRepo.getAll());
+
     }
 
     private static void userInterfaceMode() {
@@ -147,6 +152,7 @@ public class Main {
                         default -> new NoDiscount();
                     };
                     user.checkout(checkoutService, discount, paymentService, orderRepository);
+                    OrderFileWriter.saveOrdersToFile(orderRepository.getAllOrders());
                 }
                 case 5 -> {
                     System.out.println("\nYour cart:");
