@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ch.tbz"},{"l":"ch.tbz.discount"},{"l":"ch.tbz.exception"},{"l":"ch.tbz.model"},{"l":"ch.tbz.repository"},{"l":"ch.tbz.service"}];updateSearchResults();
