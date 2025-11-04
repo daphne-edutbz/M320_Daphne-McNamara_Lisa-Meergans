@@ -64,6 +64,15 @@ Mindestens 500 Zeilen Code
 Optional SpringBoot oder einfache Konsolen-UI
 KI-Hilfe im Code kenntlich machen
 
+## Muss Ziele
+Der Benutzer kann Konten erstellen, Transaktionen hinzufügen und Kontostände anzeigen.
+Transaktionen verändern den Kontostand korrekt.
+Eigene Exception-Klassen werden geworfen und behandelt.
+
+## Kann Ziele
+Berichtsausgabe über verschiedene Berechnungsarten.
+Anzeige von „grösste Ausgabe“, „monatliche Bilanz“.
+Erweiterung mit GUI
 
 ## Architektur & OO-Struktur
 Klassenübersicht (mindestens 8 Klassen)
@@ -109,3 +118,6 @@ Aussagekräftige Namen: Methoden und Variablen klar benannt
 Trennung von Schichten: UI (AccountController), Logik (Account, AccountManager, Transaction), Reports (ReportService, ReportStrategy)
 
 Exception Handling: Ungültige Eingaben lösen InvalidTransactionException oder BudgetExceededException aus
+
+## Fazit
+Ich konnte viele neue Dinge lernen, wie zum Beispiel Design Patterns. Ich kannte diese noch nicht und es vereinfacht den Code, was sehr hilfreich ist. Ich kannte zwar schon Interfaces und Vererbung vorher, aber ich konnte durch dieses Projekt das Wissen festigen. 
