@@ -27,7 +27,11 @@ The application demonstrates **object-oriented principles**, including **delegat
 
 ### 1. Add Product to Cart
 **Actor:** User 
+
+
 **Goal:** User wants to add a product to their shopping cart.
+
+
 **Flow:**
 1. User browses the product catalog.
 2. User selects a product.
@@ -37,7 +41,11 @@ The application demonstrates **object-oriented principles**, including **delegat
 
 ### 2. Checkout Order
 **Actor:** User  
+
+
 **Goal:** User wants to purchase the items in the cart.
+
+
 **Flow:**
 1. User reviews the items in the cart.
 2. User selects a payment option.
@@ -47,8 +55,12 @@ The application demonstrates **object-oriented principles**, including **delegat
 
 
 ### 3. View/Print Invoice
-**Actor:** User  
+**Actor:** User
+
+
 **Goal:** User wants a receipt for their order.
+
+
 **Flow:**
 1. After the order is completed, the system generates a receipt.
 2. User can view or print the receipt.
@@ -127,9 +139,3 @@ During this project I learned to:
 - Use **Generics** and **Exception Handling**
 - Create and interpret **UML and Sequence Diagrams**
 - Apply **Clean Code** principles for clarity and maintainability
-## 📁 Files in Repository
-- `/src/ch/tbz/*.java` – Source code
-- `/docs/UML_ClassDiagram.drawio` – Class diagram
-- `/docs/SequenceDiagram_Checkout.png` – Sequence diagram
-- `/README.md` – This documentation
-
