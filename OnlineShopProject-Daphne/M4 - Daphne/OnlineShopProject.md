@@ -23,49 +23,90 @@ The application demonstrates **object-oriented principles**, including **delegat
 - Include **exception handling** and **persistence layer**
 
 
-## Use Cases
+## Use Cases (User Perspective)
 
 ### 1. Add Product to Cart
-**Actor:** User 
+**Actor:** Shopper  
 
-
-**Goal:** User wants to add a product to their shopping cart.
-
+**Goal:** Add a product to your shopping cart.
 
 **Flow:**
-1. User browses the product catalog.
-2. User selects a product.
-3. User adds the product to their cart.
-4. System confirms the product was added and shows the updated cart contents.
+1. Browse the available products in the shop.
+2. Select a product you want to buy.
+3. Choose if you want the product gift wrapped.
+4. Add the product to your shopping cart.
+5. See a confirmation and check that your cart is updated.
 
 
-### 2. Checkout Order
-**Actor:** User  
+### 2. Remove Product from Cart
+**Actor:** Shopper  
 
-
-**Goal:** User wants to purchase the items in the cart.
-
-
-**Flow:**
-1. User reviews the items in the cart.
-2. User selects a payment option.
-3. User confirms the order.
-4. System processes the payment.
-5. System confirms that the order has been completed.
-
-
-### 3. View/Print Invoice
-**Actor:** User
-
-
-**Goal:** User wants a receipt for their order.
-
+**Goal:** Remove a product from your shopping cart.
 
 **Flow:**
-1. After the order is completed, the system generates a receipt.
-2. User can view or print the receipt.
-3. Receipt shows the purchased products, total price and any applied discounts.
+1. Open your shopping cart to see what’s inside.
+2. Select the product you no longer want and specify how many to remove.
+3. The system updates your cart and confirms the removal.
 
+
+
+### 3. View Cart
+**Actor:** Shopper  
+
+**Goal:** Check which products are in your cart and the total cost.
+
+**Flow:**
+1. Click “Show cart” to see your items.
+2. The system displays each product, quantity, and the total cost.
+
+
+### 4. Checkout Order
+**Actor:** Shopper  
+
+**Goal:** Purchase all items in your shopping cart.
+
+**Flow:**
+1. Review all items in your cart.
+2. Select a discount if available (like 10% off or fixed amount off).
+3. Confirm your purchase.
+4. The system processes your payment.
+5. Your order is completed, and you receive a confirmation.
+6. A receipt is generated for your purchase.
+
+
+### 5. View / Print Receipt
+**Actor:** Shopper  
+
+**Goal:** Get a receipt for your purchase.
+
+**Flow:**
+1. After completing your order, view the receipt.
+2. See all items you bought, their prices, discounts applied, and the final total.
+3. Keep the receipt for your records or print it.
+
+
+### 6. Persistent Order Storage
+**Actor:** System  
+
+**Goal:** Keep a record of completed orders.
+
+**Flow:**
+1. After checkout, your order is saved automatically.
+2. All past orders are stored so you can track your purchases.
+3. Each order is numbered so you can easily refer to it later.
+
+
+### 7. Demo Mode
+**Actor:** Shopper / Visitor  
+
+**Goal:** See how the online shop works without manually adding items.
+
+**Flow:**
+1. The system creates a sample shopping experience with example products.
+2. Items are added to the cart automatically, including gift-wrapped items.
+3. Orders are processed with different discounts.
+4. You can see the completed cart, receipts, and saved orders.
+5. This allows you to explore the system quickly and understand how shopping works.
 
 
 ## Class Overview (UML Summary)
