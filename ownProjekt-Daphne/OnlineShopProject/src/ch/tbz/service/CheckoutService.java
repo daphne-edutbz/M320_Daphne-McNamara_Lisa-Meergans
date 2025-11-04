@@ -21,7 +21,8 @@ public class CheckoutService {
      * 5. Print receipt
      */
     public void processOrder(User user, DiscountStrategy discount, PaymentService paymentService, OrderRepository repo) {
-        Order order = new Order(user.getId(), user.getCart().getItems(), user.getCart().getTotal());
+        Order order = new Order(0, user.getCart().getItems(), user.getCart().getTotal());
+        repo.saveOrder(order);
 
         double originalTotal = order.getTotalPrice();
         double discountAmount = discount.calculateDiscount(originalTotal);

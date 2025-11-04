@@ -11,9 +11,9 @@ public class OrderFileWriter {
     private static final String FILE_PATH = "src/ch/tbz/util/orders.txt";
 
     public static void saveOrdersToFile(List<Order> orders) {
-        try (FileWriter writer = new FileWriter(FILE_PATH)) {
+        try (FileWriter writer = new FileWriter(FILE_PATH, true)) { // append mode
             for (Order order : orders) {
-                writer.write(order.toString() + "\n"); // save each order on a new line
+                writer.write(order.toString() + "\n");
             }
             System.out.println("Orders saved to " + FILE_PATH);
         } catch (IOException e) {
