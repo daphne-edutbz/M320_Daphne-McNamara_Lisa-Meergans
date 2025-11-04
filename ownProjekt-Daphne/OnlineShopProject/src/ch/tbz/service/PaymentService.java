@@ -1,4 +1,7 @@
-package ch.tbz;
+package ch.tbz.service;
+
+import ch.tbz.model.Order;
+import ch.tbz.exception.PaymentFailedException;
 
 /**
  * Handles payment processing

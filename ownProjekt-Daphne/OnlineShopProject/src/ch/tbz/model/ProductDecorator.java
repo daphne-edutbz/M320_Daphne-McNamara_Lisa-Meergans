@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.model;
 
 /**
  * Abstract decorator for Product (Decorator pattern)

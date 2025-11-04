@@ -1,4 +1,10 @@
-package ch.tbz;
+package ch.tbz.model;
+
+import ch.tbz.discount.DiscountStrategy;
+import ch.tbz.exception.EmptyCartException;
+import ch.tbz.repository.OrderRepository;
+import ch.tbz.service.CheckoutService;
+import ch.tbz.service.PaymentService;
 
 /**
  * User represents a customer in the shop.

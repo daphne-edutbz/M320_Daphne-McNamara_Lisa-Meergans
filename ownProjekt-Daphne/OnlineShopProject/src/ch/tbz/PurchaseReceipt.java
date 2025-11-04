@@ -1,5 +1,8 @@
 package ch.tbz;
 
+import ch.tbz.model.Order;
+import ch.tbz.model.Product;
+
 /**
  * Generates and prints a receipt for an order.
  */

@@ -1,4 +1,10 @@
-package ch.tbz;
+package ch.tbz.service;
+
+import ch.tbz.*;
+import ch.tbz.discount.DiscountStrategy;
+import ch.tbz.model.Order;
+import ch.tbz.model.User;
+import ch.tbz.repository.OrderRepository;
 
 /**
  * CheckoutService handles the actual order processing.

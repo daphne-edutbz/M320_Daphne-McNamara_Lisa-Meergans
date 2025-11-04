@@ -1,4 +1,6 @@
-package ch.tbz;
+package ch.tbz.repository;
+
+import ch.tbz.model.Order;
 
 import java.util.ArrayList;
 import java.util.List;

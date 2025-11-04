@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.discount;
 
 /**
  * Discount strategy that applies no discount.

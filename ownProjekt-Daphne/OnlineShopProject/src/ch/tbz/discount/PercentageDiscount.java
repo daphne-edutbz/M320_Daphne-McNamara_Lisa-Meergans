@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.discount;
 
 //Polymorphism
 public class PercentageDiscount implements DiscountStrategy {

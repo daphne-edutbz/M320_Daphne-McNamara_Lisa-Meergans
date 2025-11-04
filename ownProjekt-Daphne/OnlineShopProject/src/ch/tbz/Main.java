@@ -1,5 +1,15 @@
 package ch.tbz;
 
+import ch.tbz.discount.DiscountStrategy;
+import ch.tbz.discount.FixedAmountDiscount;
+import ch.tbz.discount.NoDiscount;
+import ch.tbz.discount.PercentageDiscount;
+import ch.tbz.model.*;
+import ch.tbz.repository.OrderRepository;
+import ch.tbz.repository.Repository;
+import ch.tbz.service.CheckoutService;
+import ch.tbz.service.PaymentService;
+
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -27,7 +37,7 @@ public class Main {
         Product phone = new ElectronicProduct(2, "iPhone", 899.99);
         Product apple = new FoodProduct(3, "Apple", 1.50);
 
-        Product wrappedLaptop = new GiftWrapDecorator(laptop);
+        Product wrappedLaptop = new ch.tbz.model.GiftWrapDecorator(laptop);
         demoUser.addToCart(wrappedLaptop);
         demoUser.addToCart(phone);
         demoUser.addToCart(apple);

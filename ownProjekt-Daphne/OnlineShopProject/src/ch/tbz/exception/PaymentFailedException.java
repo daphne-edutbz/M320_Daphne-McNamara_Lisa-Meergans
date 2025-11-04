@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.exception;
 
 public class PaymentFailedException extends RuntimeException {
     public PaymentFailedException(String message) {

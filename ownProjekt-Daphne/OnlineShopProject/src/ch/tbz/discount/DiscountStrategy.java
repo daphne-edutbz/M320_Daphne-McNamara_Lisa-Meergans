@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.discount;
 
 /**
  * Strategy pattern interface for applying discounts.

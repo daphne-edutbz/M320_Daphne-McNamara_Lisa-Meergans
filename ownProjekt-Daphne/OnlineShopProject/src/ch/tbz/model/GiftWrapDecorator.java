@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.model;
 
 /**
  * Decorator that adds gift wrapping to a product

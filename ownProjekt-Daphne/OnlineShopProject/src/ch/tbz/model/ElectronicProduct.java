@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.model;
 
 /**
  * Electronic product subclass of Product.

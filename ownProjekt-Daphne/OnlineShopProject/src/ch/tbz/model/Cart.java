@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.model;
 
 import java.util.ArrayList;
 import java.util.List;

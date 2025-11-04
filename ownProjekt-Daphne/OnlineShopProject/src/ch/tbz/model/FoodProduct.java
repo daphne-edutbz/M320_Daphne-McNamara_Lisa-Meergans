@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.model;
 
 /**
  * Food product subclass of Product.

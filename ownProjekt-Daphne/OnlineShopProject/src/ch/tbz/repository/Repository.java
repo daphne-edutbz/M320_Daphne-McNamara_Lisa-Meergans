@@ -1,4 +1,4 @@
-package ch.tbz;
+package ch.tbz.repository;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,6 @@
-package ch.tbz;
+package ch.tbz.model;
+
+import ch.tbz.discount.DiscountStrategy;
 
 import java.util.List;
 
